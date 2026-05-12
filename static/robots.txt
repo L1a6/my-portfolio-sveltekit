@@ -1,0 +1,43 @@
+# robots.txt for larrydavid.dev
+# Last Updated: 2026-01-28
+#
+# This file tells search engines which pages they can and cannot crawl.
+# It also points to our comprehensive sitemap for efficient indexing.
+
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+
+# Disallow admin pages and API routes from being indexed
+# (These are functional pages, not content pages)
+Disallow: /admin/
+Disallow: /api/
+
+# Primary sitemap location (static + blog posts)
+Sitemap: https://larrydavid.dev/sitemap.xml
+
+# Dynamic sitemap for projects (fetched from database)
+Sitemap: https://larrydavid.dev/server-sitemap.xml
+
+# Crawl delay (helps prevent overloading server)
+# 1 second between requests is reasonable for most search engines
+Crawl-delay: 1
+
+# Specific rules for common search engines
+# Google
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+# Note: This file works in conjunction with:
+# 1. /public/sitemap.xml - Static pages and blog posts
+# 2. /src/app/server-sitemap.xml/route.ts - Dynamic project pages from database
+# 3. next-sitemap.config.js - Automated sitemap generation on build
+

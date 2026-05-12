@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    COMPREHENSIVE SEO SITEMAP - larrydavid.dev
+    
+    This sitemap uses a HYBRID APPROACH:
+    1. STATIC PAGES: Manually defined core pages (homepage, about, contact, etc.)
+    2. DYNAMIC BLOG POSTS: All individual blog posts with slugs
+    3. DYNAMIC PROJECTS: Generated via server-sitemap.xml route (see /src/app/server-sitemap.xml/route.ts)
+    
+    AUTOMATIC GENERATION:
+    - This file is regenerated on every build via next-sitemap (see next-sitemap.config.js)
+    - Run 'npm run build' to regenerate
+    - Projects are fetched dynamically from the database
+    
+    TO ADD NEW PAGES MANUALLY:
+    - Edit next-sitemap.config.js and add to additionalPaths
+    - For blog posts: Add slug to the blogSlugs array
+    - For other pages: Add new URL entries
+    
+    LAST UPDATED: 2026-01-28
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    
+    <!-- ============================================ -->
+    <!-- HOMEPAGE - Maximum Priority -->
+    <!-- ============================================ -->
+    <url>
+        <loc>https://larrydavid.dev/</loc>
+        <lastmod>2026-02-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- ============================================ -->
+    <!-- MAIN SECTION PAGES - High Priority -->
+    <!-- ============================================ -->
+    
+    <!-- About Section -->
+    <url>
+        <loc>https://larrydavid.dev/#about</loc>
+        <lastmod>2026-02-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Projects Section (Listing) -->
+    <url>
+        <loc>https://larrydavid.dev/#projects</loc>
+        <lastmod>2026-02-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Skills Page -->
+    <url>
+        <loc>https://larrydavid.dev/skills</loc>
+        <lastmod>2026-02-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Blog Listing Page -->
+    <url>
+        <loc>https://larrydavid.dev/blogs</loc>
+        <lastmod>2026-02-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Contact Page -->
+    <url>
+        <loc>https://larrydavid.dev/contact</loc>
+        <lastmod>2026-02-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- ============================================ -->
+    <!-- INDIVIDUAL BLOG POSTS - Medium Priority -->
+    <!-- Total: 3 blog posts -->
+    <!-- ============================================ -->
+    
+    <!-- Blog Post #1: Medicine & Technology -->
+    <url>
+        <loc>https://larrydavid.dev/blog/future-medical-technology</loc>
+        <lastmod>2026-02-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Blog Post #2: Modern Web Development -->
+    <url>
+        <loc>https://larrydavid.dev/blog/modern-web-development</loc>
+        <lastmod>2026-02-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Blog Post #3: Mastering Productivity -->
+    <url>
+        <loc>https://larrydavid.dev/blog/mastering-productivity</loc>
+        <lastmod>2026-01-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- ============================================ -->
+    <!-- INDIVIDUAL PROJECT PAGES -->
+    <!-- Generated dynamically via server-sitemap.xml -->
+    <!-- See: /src/app/server-sitemap.xml/route.ts -->
+    <!-- Projects are fetched from database on each build -->
+    <!-- ============================================ -->
+    
+</urlset>
