@@ -184,7 +184,7 @@
       <a
         href={personal.cv}
         download
-        class="inline-flex items-center gap-2 px-5 py-2.5 border border-neutral-200 dark:border-neutral-800 text-neutral-700 dark:text-neutral-300 rounded-full text-sm font-medium hover:border-neutral-400 dark:hover:border-neutral-600 transition-all duration-200"
+        class="inline-flex items-center gap-2 px-5 py-2.5 border border-neutral-200 dark:border-neutral-800 text-neutral-700 dark:text-neutral-300 rounded-full text-sm font-medium"
       >
         <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse-slow" />
         Available

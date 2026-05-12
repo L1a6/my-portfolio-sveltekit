@@ -134,7 +134,7 @@
         <a
           href={personal.cv}
           download
-          class="inline-flex items-center gap-2 px-5 py-2.5 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 rounded-full text-sm font-semibold hover:opacity-90 transition-all duration-200 hover:scale-[1.02]"
+          class="inline-flex items-center gap-2 px-5 py-2.5 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 rounded-full text-sm font-semibold"
         >
           View Resume
           <ArrowRight size={15} />

@@ -68,15 +68,29 @@
           </p>
 
           <div class="mb-4 overflow-hidden rounded-lg border border-neutral-200/70 dark:border-neutral-800/70 bg-neutral-50 dark:bg-neutral-900/40">
-            <dotlottie-player
-              src={step.animation}
-              background="transparent"
-              speed="1"
-              loop
-              autoplay
-              aria-hidden="true"
-              class="w-full h-32 md:h-36"
-            ></dotlottie-player>
+            {#if step.animation.endsWith('.mp4')}
+              <video
+                class="w-full h-32 md:h-36 object-cover"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                aria-hidden="true"
+              >
+                <source src={step.animation} type="video/mp4" />
+              </video>
+            {:else}
+              <dotlottie-player
+                src={step.animation}
+                background="transparent"
+                speed="1"
+                loop
+                autoplay
+                aria-hidden="true"
+                class="w-full h-32 md:h-36"
+              ></dotlottie-player>
+            {/if}
           </div>
 
           {#if activeStep === i}

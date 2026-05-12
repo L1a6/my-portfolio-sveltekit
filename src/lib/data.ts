@@ -165,7 +165,7 @@ export const approach = [
     title: 'Deploy',
     description: 'Production launch with monitoring and ongoing support for long-term success.',
     details: ['Production setup', 'CI/CD pipeline', 'Monitoring & support'],
-    animation: '/animations/deploy.lottie',
+    animation: '/animations/deploy.mp4',
     color: 'from-purple-500/10 to-pink-500/5',
   },
 ];
