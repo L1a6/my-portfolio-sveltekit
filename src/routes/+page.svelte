@@ -4,6 +4,7 @@
   import Projects from '$lib/components/Projects.svelte';
   import About from '$lib/components/About.svelte';
   import MyApproach from '$lib/components/MyApproach.svelte';
+  import GlobalReach from '$lib/components/GlobalReach.svelte';
   import Testimonials from '$lib/components/Testimonials.svelte';
   import CTA from '$lib/components/CTA.svelte';
   import Footer from '$lib/components/Footer.svelte';
@@ -18,6 +19,7 @@
 <Projects />
 <About />
 <MyApproach />
+<GlobalReach />
 <Testimonials />
 <CTA />
 <Footer />

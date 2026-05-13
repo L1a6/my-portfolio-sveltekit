@@ -3,7 +3,7 @@
   import { ArrowRight } from 'lucide-svelte';
   import { onMount } from 'svelte';
 
-  let visible = $state(false);
+  let visible = false;
 
   onMount(() => {
     const observer = new IntersectionObserver(
@@ -21,8 +21,8 @@
   class="relative py-20 md:py-28 bg-white dark:bg-[#080808] transition-colors duration-500 border-t border-neutral-200/50 dark:border-neutral-800/50 overflow-hidden"
 >
   <!-- Background decoration -->
-  <div class="absolute inset-0 grid-bg opacity-50 pointer-events-none" />
-  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-neutral-50/50 dark:via-neutral-900/20 to-transparent pointer-events-none" />
+  <div class="absolute inset-0 grid-bg opacity-50 pointer-events-none"></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-neutral-50/50 dark:via-neutral-900/20 to-transparent pointer-events-none"></div>
 
   <div class="relative z-10 max-w-3xl mx-auto px-6 text-center">
     <div
@@ -34,7 +34,7 @@
     >
       <div class="mb-6 flex items-center justify-center gap-2">
         <span class="font-mono-custom text-[9px] text-neutral-400 dark:text-neutral-600 tracking-widest uppercase">06</span>
-        <span class="w-6 h-px bg-neutral-300 dark:bg-neutral-700" />
+        <span class="w-6 h-px bg-neutral-300 dark:bg-neutral-700"></span>
         <span class="font-mono-custom text-[9px] text-neutral-400 dark:text-neutral-600 tracking-widest uppercase">Contact</span>
       </div>
 

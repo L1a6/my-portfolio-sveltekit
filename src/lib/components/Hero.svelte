@@ -26,21 +26,21 @@
 
 <section class="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden bg-white dark:bg-[#080808] transition-colors duration-500">
   <!-- Grid background -->
-  <div class="absolute inset-0 grid-bg opacity-100 pointer-events-none" />
+  <div class="absolute inset-0 grid-bg opacity-100 pointer-events-none"></div>
 
   <!-- Ambient glow -->
-  <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-neutral-100 dark:bg-neutral-900/60 blur-3xl pointer-events-none opacity-60" />
+  <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-neutral-100 dark:bg-neutral-900/60 blur-3xl pointer-events-none opacity-60"></div>
 
   <!-- Technical boundary lines -->
   <div class="hidden lg:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[900px] pointer-events-none">
-    <div class="absolute top-20 left-0 w-6 h-px bg-neutral-300 dark:bg-neutral-700" />
-    <div class="absolute top-20 left-0 w-px h-6 bg-neutral-300 dark:bg-neutral-700" />
-    <div class="absolute top-20 right-0 w-6 h-px bg-neutral-300 dark:bg-neutral-700" />
-    <div class="absolute top-20 right-0 w-px h-6 bg-neutral-300 dark:bg-neutral-700" />
-    <div class="absolute bottom-6 left-0 w-6 h-px bg-neutral-300 dark:bg-neutral-700" />
-    <div class="absolute bottom-6 left-0 w-px h-6 bg-neutral-300 dark:bg-neutral-700 -translate-y-6" />
-    <div class="absolute bottom-6 right-0 w-6 h-px bg-neutral-300 dark:bg-neutral-700" />
-    <div class="absolute bottom-6 right-0 w-px h-6 bg-neutral-300 dark:bg-neutral-700 -translate-y-6" />
+    <div class="absolute top-20 left-0 w-6 h-px bg-neutral-300 dark:bg-neutral-700"></div>
+    <div class="absolute top-20 left-0 w-px h-6 bg-neutral-300 dark:bg-neutral-700"></div>
+    <div class="absolute top-20 right-0 w-6 h-px bg-neutral-300 dark:bg-neutral-700"></div>
+    <div class="absolute top-20 right-0 w-px h-6 bg-neutral-300 dark:bg-neutral-700"></div>
+    <div class="absolute bottom-6 left-0 w-6 h-px bg-neutral-300 dark:bg-neutral-700"></div>
+    <div class="absolute bottom-6 left-0 w-px h-6 bg-neutral-300 dark:bg-neutral-700 -translate-y-6"></div>
+    <div class="absolute bottom-6 right-0 w-6 h-px bg-neutral-300 dark:bg-neutral-700"></div>
+    <div class="absolute bottom-6 right-0 w-px h-6 bg-neutral-300 dark:bg-neutral-700 -translate-y-6"></div>
 
     <!-- PORTFOLIO label -->
     <div
@@ -49,12 +49,12 @@
       class:opacity-100={mounted}
       style="transition-delay: 1.5s"
     >
-      <div class="w-px h-12 bg-gradient-to-b from-transparent via-neutral-300/50 dark:via-neutral-600/50 to-transparent" />
+      <div class="w-px h-12 bg-gradient-to-b from-transparent via-neutral-300/50 dark:via-neutral-600/50 to-transparent"></div>
       <span
         class="text-[9px] font-display font-bold tracking-[0.6em] text-neutral-400/50 dark:text-neutral-600/50 uppercase"
         style="writing-mode: vertical-rl;"
       >PORTFOLIO</span>
-      <div class="w-px h-12 bg-gradient-to-b from-transparent via-neutral-300/50 dark:via-neutral-600/50 to-transparent" />
+      <div class="w-px h-12 bg-gradient-to-b from-transparent via-neutral-300/50 dark:via-neutral-600/50 to-transparent"></div>
     </div>
 
     <!-- V1 badge -->
@@ -64,11 +64,11 @@
       class:opacity-100={mounted}
       style="transition-delay: 1.7s"
     >
-      <div class="w-px h-12 bg-gradient-to-b from-transparent via-neutral-300/50 dark:via-neutral-600/50 to-transparent" />
+      <div class="w-px h-12 bg-gradient-to-b from-transparent via-neutral-300/50 dark:via-neutral-600/50 to-transparent"></div>
       <div class="px-2 py-1.5 rounded border border-neutral-300/50 dark:border-neutral-700/50 bg-white/60 dark:bg-neutral-900/60 backdrop-blur-sm">
         <span class="text-[9px] font-display font-black tracking-[0.3em] text-neutral-500 dark:text-neutral-500 uppercase">V2</span>
       </div>
-      <div class="w-px h-12 bg-gradient-to-b from-transparent via-neutral-300/50 dark:via-neutral-600/50 to-transparent" />
+      <div class="w-px h-12 bg-gradient-to-b from-transparent via-neutral-300/50 dark:via-neutral-600/50 to-transparent"></div>
     </div>
   </div>
 
@@ -82,7 +82,7 @@
       style="transition-delay: 0.1s"
     >
       <span class="font-mono-custom text-[9px] text-neutral-400 dark:text-neutral-600 tracking-widest uppercase">01</span>
-      <span class="w-6 h-px bg-neutral-300 dark:bg-neutral-700" />
+      <span class="w-6 h-px bg-neutral-300 dark:bg-neutral-700"></span>
       <span class="font-mono-custom text-[9px] text-neutral-400 dark:text-neutral-600 tracking-widest uppercase">Introduction</span>
     </div>
 
@@ -97,14 +97,14 @@
     >
       <div class="relative">
         <!-- Corner marks -->
-        <div class="absolute -top-2 -left-2 w-3 h-px bg-neutral-400 dark:bg-neutral-600" />
-        <div class="absolute -top-2 -left-2 h-3 w-px bg-neutral-400 dark:bg-neutral-600" />
-        <div class="absolute -top-2 -right-2 w-3 h-px bg-neutral-400 dark:bg-neutral-600" />
-        <div class="absolute -top-2 -right-2 h-3 w-px bg-neutral-400 dark:bg-neutral-600" />
-        <div class="absolute -bottom-2 -left-2 w-3 h-px bg-neutral-400 dark:bg-neutral-600" />
-        <div class="absolute -bottom-2 -left-2 h-3 w-px bg-neutral-400 dark:bg-neutral-600 -translate-y-3" />
-        <div class="absolute -bottom-2 -right-2 w-3 h-px bg-neutral-400 dark:bg-neutral-600" />
-        <div class="absolute -bottom-2 -right-2 h-3 w-px bg-neutral-400 dark:bg-neutral-600 -translate-y-3" />
+        <div class="absolute -top-2 -left-2 w-3 h-px bg-neutral-400 dark:bg-neutral-600"></div>
+        <div class="absolute -top-2 -left-2 h-3 w-px bg-neutral-400 dark:bg-neutral-600"></div>
+        <div class="absolute -top-2 -right-2 w-3 h-px bg-neutral-400 dark:bg-neutral-600"></div>
+        <div class="absolute -top-2 -right-2 h-3 w-px bg-neutral-400 dark:bg-neutral-600"></div>
+        <div class="absolute -bottom-2 -left-2 w-3 h-px bg-neutral-400 dark:bg-neutral-600"></div>
+        <div class="absolute -bottom-2 -left-2 h-3 w-px bg-neutral-400 dark:bg-neutral-600 -translate-y-3"></div>
+        <div class="absolute -bottom-2 -right-2 w-3 h-px bg-neutral-400 dark:bg-neutral-600"></div>
+        <div class="absolute -bottom-2 -right-2 h-3 w-px bg-neutral-400 dark:bg-neutral-600 -translate-y-3"></div>
 
         <img
           src={personal.avatar}
@@ -122,7 +122,7 @@
         >
           <div class="group cursor-default">
             <div class="flex items-center h-4 w-4 group-hover:w-auto rounded-full bg-white dark:bg-neutral-900 ring-2 ring-white dark:ring-neutral-900 overflow-hidden transition-all duration-300 ease-out">
-              <span class="w-2.5 h-2.5 mx-[3px] rounded-full bg-emerald-500 shrink-0 animate-pulse-slow" />
+              <span class="w-2.5 h-2.5 mx-[3px] rounded-full bg-emerald-500 shrink-0 animate-pulse-slow"></span>
               <span class="w-0 overflow-hidden whitespace-nowrap text-[8px] font-medium text-neutral-600 dark:text-neutral-400 transition-all duration-300 group-hover:w-auto group-hover:pr-1.5">
                 {personal.status}
               </span>
@@ -151,7 +151,7 @@
       class:scale-x-0={!mounted}
       class:scale-x-100={mounted}
       style="transition-delay: 0.9s"
-    />
+    ></div>
 
     <!-- Description with rotating tech -->
     <div
@@ -161,7 +161,7 @@
     >
       <span>I build web applications with </span>
       <span class="inline-flex items-center gap-1 font-medium text-neutral-800 dark:text-neutral-200 min-w-[100px]">
-        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
         {techItems[rotatingIndex]}
       </span>
       <span> {personal.description}</span>
@@ -186,7 +186,7 @@
         download
         class="inline-flex items-center gap-2 px-5 py-2.5 border border-neutral-200 dark:border-neutral-800 text-neutral-700 dark:text-neutral-300 rounded-full text-sm font-medium"
       >
-        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse-slow" />
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse-slow"></span>
         Available
       </a>
     </div>
@@ -221,9 +221,9 @@
       class:opacity-0={!mounted}
       style="transition-delay: 1.6s"
     >
-      <div class="w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-700" />
+      <div class="w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-700"></div>
       <span class="font-mono-custom text-[9px] text-neutral-400 dark:text-neutral-600 tracking-widest uppercase">Scroll to explore</span>
-      <div class="flex-1 h-px bg-neutral-200 dark:bg-neutral-800" />
+      <div class="flex-1 h-px bg-neutral-200 dark:bg-neutral-800"></div>
     </div>
   </div>
 </section>

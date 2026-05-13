@@ -36,7 +36,7 @@
     >
       <div class="mb-6 flex items-center gap-2">
         <span class="font-mono-custom text-[9px] text-neutral-400 dark:text-neutral-600 tracking-widest uppercase">03</span>
-        <span class="w-6 h-px bg-neutral-300 dark:bg-neutral-700" />
+        <span class="w-6 h-px bg-neutral-300 dark:bg-neutral-700"></span>
         <span class="font-mono-custom text-[9px] text-neutral-400 dark:text-neutral-600 tracking-widest uppercase">About</span>
       </div>
     </div>
@@ -53,14 +53,14 @@
       >
         <div class="relative">
           <!-- Crop marks -->
-          <div class="absolute -top-3 -left-3 w-4 h-px bg-neutral-400 dark:bg-neutral-600" />
-          <div class="absolute -top-3 -left-3 h-4 w-px bg-neutral-400 dark:bg-neutral-600" />
-          <div class="absolute -top-3 -right-3 w-4 h-px bg-neutral-400 dark:bg-neutral-600" />
-          <div class="absolute -top-3 -right-3 h-4 w-px bg-neutral-400 dark:bg-neutral-600" />
-          <div class="absolute -bottom-3 -left-3 w-4 h-px bg-neutral-400 dark:bg-neutral-600" />
-          <div class="absolute -bottom-3 -left-3 h-4 w-px bg-neutral-400 dark:bg-neutral-600 -translate-y-4" />
-          <div class="absolute -bottom-3 -right-3 w-4 h-px bg-neutral-400 dark:bg-neutral-600" />
-          <div class="absolute -bottom-3 -right-3 h-4 w-px bg-neutral-400 dark:bg-neutral-600 -translate-y-4" />
+          <div class="absolute -top-3 -left-3 w-4 h-px bg-neutral-400 dark:bg-neutral-600"></div>
+          <div class="absolute -top-3 -left-3 h-4 w-px bg-neutral-400 dark:bg-neutral-600"></div>
+          <div class="absolute -top-3 -right-3 w-4 h-px bg-neutral-400 dark:bg-neutral-600"></div>
+          <div class="absolute -top-3 -right-3 h-4 w-px bg-neutral-400 dark:bg-neutral-600"></div>
+          <div class="absolute -bottom-3 -left-3 w-4 h-px bg-neutral-400 dark:bg-neutral-600"></div>
+          <div class="absolute -bottom-3 -left-3 h-4 w-px bg-neutral-400 dark:bg-neutral-600 -translate-y-4"></div>
+          <div class="absolute -bottom-3 -right-3 w-4 h-px bg-neutral-400 dark:bg-neutral-600"></div>
+          <div class="absolute -bottom-3 -right-3 h-4 w-px bg-neutral-400 dark:bg-neutral-600 -translate-y-4"></div>
 
           <div class="relative overflow-hidden rounded-lg aspect-square bg-neutral-100 dark:bg-neutral-900">
             <img
@@ -69,11 +69,11 @@
               class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               loading="lazy"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-neutral-900/40 via-transparent to-transparent" />
+            <div class="absolute inset-0 bg-gradient-to-t from-neutral-900/40 via-transparent to-transparent"></div>
 
             <!-- Active badge -->
             <div class="absolute bottom-3 left-3 flex items-center gap-1.5 px-2 py-1 bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
-              <span class="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse-slow" />
+              <span class="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse-slow"></span>
               <span class="text-[8px] font-semibold text-white uppercase tracking-wider">Active</span>
             </div>
           </div>
@@ -99,7 +99,7 @@
           <span class="text-neutral-400 dark:text-neutral-600"> Problem Solver.</span>
         </h2>
 
-        <div class="w-full h-px bg-neutral-200 dark:bg-neutral-800 mb-6" />
+        <div class="w-full h-px bg-neutral-200 dark:bg-neutral-800 mb-6"></div>
 
         <p class="text-sm md:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
           {personal.bio}
@@ -117,11 +117,11 @@
               <span class="font-mono-custom text-[10px] text-neutral-400 dark:text-neutral-500 uppercase tracking-wider w-16 shrink-0 pt-0.5">
                 {group.category}
               </span>
-              <span class="w-4 h-px bg-neutral-300 dark:bg-neutral-700 mt-2.5 shrink-0" />
+              <span class="w-4 h-px bg-neutral-300 dark:bg-neutral-700 mt-2.5 shrink-0"></span>
               <div class="flex flex-wrap gap-x-3 gap-y-1">
                 {#each group.items as item}
                   <span class="flex items-center text-xs text-neutral-700 dark:text-neutral-300 font-medium">
-                    <span class="w-1 h-1 rounded-full bg-neutral-400 dark:bg-neutral-600 mr-1.5" />
+                    <span class="w-1 h-1 rounded-full bg-neutral-400 dark:bg-neutral-600 mr-1.5"></span>
                     {item}
                   </span>
                 {/each}
