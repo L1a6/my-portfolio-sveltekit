@@ -35,13 +35,13 @@
     >
       <div class="mb-6 flex items-center gap-2">
         <span class="font-mono-custom text-[9px] text-neutral-400 dark:text-neutral-600 tracking-widest uppercase">05</span>
-        <span class="w-6 h-px bg-neutral-300 dark:bg-neutral-700" />
+        <span class="w-6 h-px bg-neutral-300 dark:bg-neutral-700"></span>
         <span class="font-mono-custom text-[9px] text-neutral-400 dark:text-neutral-600 tracking-widest uppercase">Testimonials</span>
       </div>
       <h2 class="font-display text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white tracking-tight">
         What People <span class="text-neutral-400 dark:text-neutral-600">Say.</span>
       </h2>
-      <div class="mt-4 w-full h-px bg-neutral-200 dark:bg-neutral-800" />
+      <div class="mt-4 w-full h-px bg-neutral-200 dark:bg-neutral-800"></div>
     </div>
 
     <div
@@ -102,7 +102,7 @@
                     onclick={() => activeIndex = i}
                     class="w-1.5 h-1.5 rounded-full transition-all duration-300 {i === activeIndex ? 'bg-neutral-900 dark:bg-white scale-125' : 'bg-neutral-300 dark:bg-neutral-700'}"
                     aria-label="Go to testimonial {i + 1}"
-                  />
+                  ></button>
                 {/each}
               </div>
               <button

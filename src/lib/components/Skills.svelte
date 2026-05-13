@@ -31,11 +31,11 @@
     class:translate-y-0={visible}
   >
     <div class="flex items-center justify-center gap-4 mb-2">
-      <div class="h-px w-10 bg-neutral-300 dark:bg-neutral-700" />
+      <div class="h-px w-10 bg-neutral-300 dark:bg-neutral-700"></div>
       <h2 class="font-mono-custom text-xs font-bold uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-500">
         Tech Stack
       </h2>
-      <div class="h-px w-10 bg-neutral-300 dark:bg-neutral-700" />
+      <div class="h-px w-10 bg-neutral-300 dark:bg-neutral-700"></div>
     </div>
     <p class="text-center text-sm text-neutral-500 dark:text-neutral-500">
       Building modern, scalable applications with industry-leading frameworks

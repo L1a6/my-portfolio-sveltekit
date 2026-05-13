@@ -35,13 +35,13 @@
     >
       <div class="mb-6 flex items-center gap-2">
         <span class="font-mono-custom text-[9px] text-neutral-400 dark:text-neutral-600 tracking-widest uppercase">04</span>
-        <span class="w-6 h-px bg-neutral-300 dark:bg-neutral-700" />
+        <span class="w-6 h-px bg-neutral-300 dark:bg-neutral-700"></span>
         <span class="font-mono-custom text-[9px] text-neutral-400 dark:text-neutral-600 tracking-widest uppercase">Process</span>
       </div>
       <h2 class="font-display text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white tracking-tight leading-[1.15]">
         My Approach. <span class="text-neutral-400 dark:text-neutral-600">How I Work.</span>
       </h2>
-      <div class="mt-4 w-full h-px bg-neutral-200 dark:bg-neutral-800" />
+      <div class="mt-4 w-full h-px bg-neutral-200 dark:bg-neutral-800"></div>
     </div>
 
     <!-- Steps -->
@@ -58,7 +58,7 @@
         >
           <div class="flex items-start justify-between mb-3">
             <span class="font-mono-custom text-[10px] text-neutral-400 dark:text-neutral-600 tracking-widest">{step.number}</span>
-            <div class="w-2 h-2 rounded-full {activeStep === i ? 'bg-emerald-500' : 'bg-neutral-200 dark:bg-neutral-800'} transition-colors duration-300" />
+            <div class="w-2 h-2 rounded-full {activeStep === i ? 'bg-emerald-500' : 'bg-neutral-200 dark:bg-neutral-800'} transition-colors duration-300"></div>
           </div>
 
           <h3 class="font-display font-bold text-xl text-neutral-900 dark:text-white mb-2">{step.title}</h3>
@@ -97,7 +97,7 @@
             <div class="space-y-1.5">
               {#each step.details as detail}
                 <div class="flex items-center gap-2 text-xs text-neutral-500 dark:text-neutral-500">
-                  <span class="w-1 h-1 rounded-full bg-emerald-500 shrink-0" />
+                  <span class="w-1 h-1 rounded-full bg-emerald-500 shrink-0"></span>
                   {detail}
                 </div>
               {/each}
