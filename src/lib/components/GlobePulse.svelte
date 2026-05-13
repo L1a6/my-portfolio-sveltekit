@@ -56,6 +56,12 @@
 		if (!canvasRef) return;
 
 		const canvas = canvasRef;
+
+		// Quick guard: avoid initializing heavy WebGL on small viewports (mobile)
+		if (window.innerWidth < 640) {
+			canvas.style.opacity = '1';
+			return;
+		}
 		let globe: ReturnType<typeof createGlobe> | null = null;
 		let animationId: number;
 		let phi = 0;
@@ -140,63 +146,23 @@
 	<canvas
 		bind:this={canvasRef}
 		on:pointerdown={handlePointerDown}
-		style={{
-			width: '100%',
-			height: '100%',
-			cursor: 'grab',
-			opacity: 0,
-			transition: 'opacity 1.2s ease',
-			borderRadius: '50%',
-			touchAction: 'none'
-		}}
+		style={`width: 100%; height: 100%; cursor: grab; opacity: 0; transition: opacity 1.2s ease; border-radius: 50%; touch-action: none;`}
 	></canvas>
 
 	{#each markers as m (m.id)}
 		<div
-			style={{
-				position: 'absolute',
-				bottom: 'anchor(center)',
-				left: 'anchor(center)',
-				translate: '-50% 50%',
-				width: '40px',
-				height: '40px',
-				display: 'flex',
-				alignItems: 'center',
-				justifyContent: 'center',
-				pointerEvents: 'none',
-				opacity: `var(--cobe-visible-${m.id}, 0)`,
-				filter: `blur(calc((1 - var(--cobe-visible-${m.id}, 0)) * 8px))`,
-				transition: 'opacity 0.4s, filter 0.4s'
-			}}
+			style={
+				`position: absolute; bottom: 50%; left: 50%; transform: translate(-50%, 50%); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; pointer-events: none; opacity: var(--cobe-visible-${m.id}, 0); filter: blur(calc((1 - var(--cobe-visible-${m.id}, 0)) * 8px)); transition: opacity 0.4s, filter 0.4s;`
+			}
 		>
 			<span
-				style={{
-					position: 'absolute',
-					inset: 0,
-					border: '2px solid #33ccdd',
-					borderRadius: '50%',
-					opacity: 0,
-					animation: `pulse-expand 2s ease-out infinite ${m.delay}s`
-				}}
+				style={`position: absolute; inset: 0; border: 2px solid #33ccdd; border-radius: 50%; opacity: 0; animation: pulse-expand 2s ease-out infinite ${m.delay}s;`}
 			></span>
 			<span
-				style={{
-					position: 'absolute',
-					inset: 0,
-					border: '2px solid #33ccdd',
-					borderRadius: '50%',
-					opacity: 0,
-					animation: `pulse-expand 2s ease-out infinite ${m.delay + 0.5}s`
-				}}
+				style={`position: absolute; inset: 0; border: 2px solid #33ccdd; border-radius: 50%; opacity: 0; animation: pulse-expand 2s ease-out infinite ${m.delay + 0.5}s;`}
 			></span>
 			<span
-				style={{
-					width: '10px',
-					height: '10px',
-					background: '#33ccdd',
-					borderRadius: '50%',
-					boxShadow: '0 0 0 3px #111, 0 0 0 5px #33ccdd'
-				}}
+				style={`width: 10px; height: 10px; background: #33ccdd; border-radius: 50%; box-shadow: 0 0 0 3px #111, 0 0 0 5px #33ccdd;`}
 			></span>
 		</div>
 	{/each}
