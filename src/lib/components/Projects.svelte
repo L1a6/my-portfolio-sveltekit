@@ -40,10 +40,10 @@
 >
   <!-- Technical lines -->
   <div class="hidden lg:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[900px] pointer-events-none">
-    <div class="absolute top-8 left-0 w-5 h-px bg-neutral-200 dark:bg-neutral-800" />
-    <div class="absolute top-8 left-0 w-px h-5 bg-neutral-200 dark:bg-neutral-800" />
-    <div class="absolute top-8 right-0 w-5 h-px bg-neutral-200 dark:bg-neutral-800" />
-    <div class="absolute top-8 right-0 w-px h-5 bg-neutral-200 dark:bg-neutral-800" />
+    <div class="absolute top-8 left-0 w-5 h-px bg-neutral-200 dark:bg-neutral-800"></div>
+    <div class="absolute top-8 left-0 w-px h-5 bg-neutral-200 dark:bg-neutral-800"></div>
+    <div class="absolute top-8 right-0 w-5 h-px bg-neutral-200 dark:bg-neutral-800"></div>
+    <div class="absolute top-8 right-0 w-px h-5 bg-neutral-200 dark:bg-neutral-800"></div>
   </div>
 
   <div class="max-w-3xl mx-auto px-6">
@@ -57,13 +57,13 @@
     >
       <div class="mb-6 flex items-center gap-2">
         <span class="font-mono-custom text-[9px] text-neutral-400 dark:text-neutral-600 tracking-widest uppercase">02</span>
-        <span class="w-6 h-px bg-neutral-300 dark:bg-neutral-700" />
+        <span class="w-6 h-px bg-neutral-300 dark:bg-neutral-700"></span>
         <span class="font-mono-custom text-[9px] text-neutral-400 dark:text-neutral-600 tracking-widest uppercase">Work</span>
       </div>
       <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 dark:text-white tracking-tight leading-[1.15]">
         Selected <span class="text-neutral-400 dark:text-neutral-600">Projects.</span>
       </h2>
-      <div class="mt-4 w-full h-px bg-neutral-200 dark:bg-neutral-800" />
+      <div class="mt-4 w-full h-px bg-neutral-200 dark:bg-neutral-800"></div>
     </div>
 
     <!-- Accordion projects -->
@@ -117,7 +117,7 @@
                     loading="lazy"
                   />
                   <!-- Gradient overlay -->
-                  <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
                 </div>
 
                 <!-- Info -->

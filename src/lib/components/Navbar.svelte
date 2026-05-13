@@ -55,6 +55,7 @@
     <div class="hidden md:flex items-center gap-1 bg-white/70 dark:bg-white/5 backdrop-blur-sm border border-black/[0.06] dark:border-white/[0.07] rounded-full px-2 py-1.5">
       {#each navItems as item}
         {@const active = isActive(item.href)}
+        {@const Icon = item.icon}
         <a
           href={item.href}
           onclick={() => handleNavClick(item.href)}
@@ -68,7 +69,7 @@
           class:hover:text-neutral-900={!active}
           class:dark:hover:text-neutral-200={!active}
         >
-          <svelte:component this={item.icon} size={13} />
+          <Icon size={13} />
           {item.label}
         </a>
       {/each}
@@ -111,12 +112,13 @@
       style="background: var(--color-bg);"
     >
       {#each navItems as item}
+        {@const Icon = item.icon}
         <a
           href={item.href}
           onclick={() => handleNavClick(item.href)}
           class="flex items-center gap-3 py-3 text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white border-b border-black/[0.04] dark:border-white/[0.04] last:border-0 transition-colors"
         >
-          <svelte:component this={item.icon} size={16} />
+          <Icon size={16} />
           {item.label}
         </a>
       {/each}
