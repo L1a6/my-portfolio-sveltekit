@@ -12,12 +12,12 @@
 
   const SPEED = 0.003;
 
-  const markers: { location: [number, number]; size: number }[] = [
-    { location: [6.52,    3.38],  size: 0.04 }, // Lagos
-    { location: [51.51,  -0.13],  size: 0.03 }, // London
-    { location: [40.71, -74.01],  size: 0.03 }, // New York
-    { location: [35.68, 139.65],  size: 0.03 }, // Tokyo
-    { location: [-33.87, 151.21], size: 0.03 }, // Sydney
+  const markers = [
+    { location: [6.52,    3.38]  as [number, number], size: 0.025 }, // Lagos
+    { location: [51.51,  -0.13]  as [number, number], size: 0.025 }, // London
+    { location: [40.71, -74.01]  as [number, number], size: 0.025 }, // New York
+    { location: [35.68, 139.65]  as [number, number], size: 0.025 }, // Tokyo
+    { location: [-33.87, 151.21] as [number, number], size: 0.025 }, // Sydney
   ];
 
   function onPointerDown(e: PointerEvent) {
@@ -49,82 +49,101 @@
     let rafId = 0;
     let phi = 0;
 
-    async function init() {
-      const { default: createGlobe } = await import('cobe');
-      if (!canvasEl || globe) return;
-
-      const width  = canvasEl.offsetWidth || 400;
-      const isDark = document.documentElement.classList.contains('dark');
-
-      const cfg = isDark
+    function getConfig(isDark: boolean) {
+      return isDark
         ? {
             dark          : 1,
-            diffuse       : 1.2,
-            mapBrightness : 6,
+            diffuse       : 1.5,
+            mapBrightness : 10,
             baseColor     : [0.08, 0.08, 0.08] as [number, number, number],
-            markerColor   : [0.55, 0.55, 0.55] as [number, number, number],
-            glowColor     : [0.08, 0.08, 0.08] as [number, number, number],
+            markerColor   : [0.2,  0.8,  0.9]  as [number, number, number],
+            glowColor     : [0.05, 0.05, 0.05] as [number, number, number],
           }
         : {
             dark          : 0,
             diffuse       : 2.0,
             mapBrightness : 5,
             baseColor     : [0.95, 0.95, 0.95] as [number, number, number],
-            markerColor   : [0.60, 0.60, 0.60] as [number, number, number],
+            markerColor   : [0.2,  0.8,  0.9]  as [number, number, number],
             glowColor     : [0.95, 0.95, 0.95] as [number, number, number],
           };
+    }
 
-      globe = createGlobe(canvasEl, {
-        devicePixelRatio : Math.min(window.devicePixelRatio || 1, 2),
-        width,
-        height           : width,
-        phi              : 0,
-        theta            : 0.3,
-        mapSamples       : 16000,
-        opacity          : 1,
-        markers,
-        ...cfg,
-      });
+    function createGlobeInstance() {
+      if (rafId) cancelAnimationFrame(rafId);
+      if (globe) { globe.destroy(); globe = null; }
+      if (canvasEl) canvasEl.style.opacity = '0';
 
-      function animate() {
-        if (!isPaused) phi += SPEED;
-        globe.update({
-          phi  : phi + phiOffset + dragPhi,
-          theta: 0.3 + thetaOffset + dragTheta,
+      import('cobe').then(({ default: createGlobe }) => {
+        if (!canvasEl) return;
+
+        const width  = canvasEl.offsetWidth || 400;
+        const isDark = document.documentElement.classList.contains('dark');
+
+        globe = createGlobe(canvasEl, {
+          devicePixelRatio : Math.min(window.devicePixelRatio || 1, 2),
+          width,
+          height           : width,
+          phi              : 0,
+          theta            : 0.2,
+          mapSamples       : 16000,
+          opacity          : 0.7,
+          markers,
+          ...getConfig(isDark),
         });
-        rafId = requestAnimationFrame(animate);
-      }
-      animate();
 
-      requestAnimationFrame(() => {
-        if (canvasEl) canvasEl.style.opacity = '1';
+        function animate() {
+          if (!isPaused) phi += SPEED;
+          globe.update({
+            phi  : phi + phiOffset + dragPhi,
+            theta: 0.2 + thetaOffset + dragTheta,
+          });
+          rafId = requestAnimationFrame(animate);
+        }
+        animate();
+
+        setTimeout(() => {
+          if (canvasEl) canvasEl.style.opacity = '1';
+        });
       });
     }
 
     if (canvasEl?.offsetWidth > 0) {
-      init();
+      createGlobeInstance();
     } else {
       const ro = new ResizeObserver(entries => {
-        if (entries[0]?.contentRect.width > 0) { ro.disconnect(); init(); }
+        if (entries[0]?.contentRect.width > 0) {
+          ro.disconnect();
+          createGlobeInstance();
+        }
       });
       ro.observe(canvasEl);
     }
 
+    // Re-init on theme toggle
+    const mo = new MutationObserver(() => createGlobeInstance());
+    mo.observe(document.documentElement, {
+      attributes     : true,
+      attributeFilter: ['class'],
+    });
+
     return () => {
       if (rafId) cancelAnimationFrame(rafId);
       globe?.destroy();
+      mo.disconnect();
       window.removeEventListener('pointermove', onPointerMove);
       window.removeEventListener('pointerup',   onPointerUp);
     };
   });
 </script>
 
-<div class="relative aspect-square w-full select-none">
+<!-- Clean. Just the canvas. Native COBE dots only. -->
+<div class="relative aspect-square select-none">
   <canvas
     bind:this={canvasEl}
     onpointerdown={onPointerDown}
     style="width:100%; height:100%; cursor:grab; opacity:0;
-           transition:opacity 1.4s ease; border-radius:50%;
-           touch-action:none; display:block;"
+           transition:opacity 1.2s ease; border-radius:50%;
+           touch-action:none;"
   />
 </div>

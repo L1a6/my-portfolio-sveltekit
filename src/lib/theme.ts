@@ -6,8 +6,8 @@ type Theme = 'light' | 'dark';
 function createTheme() {
   const initial: Theme = browser
     ? (localStorage.getItem('theme') as Theme) ||
-      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
-    : 'dark';
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'light' : 'light')
+    : 'light';
 
   const { subscribe, set, update } = writable<Theme>(initial);
 
