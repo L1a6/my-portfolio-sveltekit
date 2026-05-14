@@ -5,9 +5,10 @@
   import About from '$lib/components/About.svelte';
   import MyApproach from '$lib/components/MyApproach.svelte';
   import Testimonials from '$lib/components/Testimonials.svelte';
-  import GlobalReach from '$lib/components/GlobalReach.svelte';
+  import GlobalCanvas from '$lib/components/Globe.svelte';
   import CTA from '$lib/components/CTA.svelte';
   import Footer from '$lib/components/Footer.svelte';
+    import Globe from '$lib/components/Globe.svelte';
 </script>
 
 <svelte:head>
@@ -20,6 +21,6 @@
 <About />
 <MyApproach />
 <Testimonials />
-<GlobalReach />
+<Globe />
 <CTA />
 <Footer />
