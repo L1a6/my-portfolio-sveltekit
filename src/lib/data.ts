@@ -41,7 +41,7 @@ export const projects = [
     category: 'Education',
     image: 'adeips.png',
     url: 'https://adeips-official-website.vercel.app',
-    github: 'https://github.com/L1a6/adeips-official-website',
+    github: '',
     technologies: ['Next.js', 'TypeScript', 'Supabase', 'Tailwind CSS'],
     featured: true,
   },
